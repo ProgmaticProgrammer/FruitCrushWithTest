@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import QtTest 1.0
-import "../app/qml/game"
+import "../FruitCrush/qml/game"
 
 TestCase {
     name: "GameTest"
