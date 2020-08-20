@@ -1,0 +1,3 @@
+[submodule "FruitCrush"]
+	path = FruitCrush
+	url = https://github.com/ProgmaticProgrammer/FruitCrush.git
