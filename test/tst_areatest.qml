@@ -66,4 +66,17 @@ TestCase {
         result = explorer.findVerticalSpan(field, block)
         compare(result, [-2, 1])
     }
+
+       function test_findConnectedBlocks() {
+           var block = field[1][1]
+           var result = explorer.findConnectedComponent(field, block)
+           compare(result.origin, {x: block.row, y: block.column})
+           compare(result.xSpan, [-1, 2])
+           compare(result.ySpan, [-1, 2])
+
+           result = explorer.findConnectedComponent(field, {row: 0, column: 0, type: 1})
+           compare(result.origin, {x: 0, y: 0})
+           compare(result.xSpan, [0, 2])
+           compare(result.ySpan, [0, 2])
+       }
 }
